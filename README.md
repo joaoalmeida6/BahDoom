@@ -380,7 +380,7 @@ Essa estrutura ainda poderá mudar conforme a arquitetura evoluir.
 * [x] Criar repositório
 * [x] Configurar CMake
 * [x] Configurar ambiente de desenvolvimento
-* [ ] Estrutura inicial da engine
+* [x] Estrutura inicial da engine
 * [ ] Sistema de logging
 * [ ] Game loop
 

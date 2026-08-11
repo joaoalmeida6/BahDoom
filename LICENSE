@@ -1,0 +1,58 @@
+BahDoom License
+
+Copyright (c) 2026 BahDoom Contributors
+
+BahDoom is a source-available Doom-compatible game engine developed as an independent project.
+
+1. Permission
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of the BahDoom source code, to use, study, modify, and distribute the source code, subject to the terms and conditions below.
+
+2. Redistribution
+
+Redistribution of the BahDoom source code, in original or modified form, is permitted provided that:
+
+1. The original copyright notice and this license are preserved.
+2. Significant modifications are clearly identified.
+3. Redistributions include a copy of this license.
+4. The BahDoom name, logo, and official branding are not used to imply endorsement of a modified or unofficial version without prior permission.
+
+3. Derivative Works
+
+You are permitted to create and distribute derivative works based on BahDoom, including modified engines, source ports, forks, and other software projects.
+
+Derivative works may use a different name and branding, provided that they do not falsely imply that they are official releases of BahDoom.
+
+4. Commercial Use
+
+Commercial use, including selling software derived from BahDoom or incorporating BahDoom code into commercial products, is permitted under the terms of this license.
+
+5. No Warranty
+
+THE BAHDOOM SOURCE CODE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+6. Third-Party Components
+
+BahDoom may include, link against, or otherwise depend upon third-party software, libraries, assets, or technologies.
+
+Such components are NOT covered by this license unless explicitly stated otherwise.
+
+Each third-party component remains subject to its own license. The applicable third-party licenses and copyright notices are provided in the "THIRD_PARTY_LICENSES" file or in the corresponding component's directory.
+
+7. Doom and id Software
+
+BahDoom is an independent project and is not affiliated with, endorsed by, or sponsored by id Software.
+
+"Doom" and related trademarks, copyrights, and intellectual property remain the property of their respective owners.
+
+BahDoom does not grant permission to redistribute copyrighted Doom game assets, including IWADs, unless such redistribution is separately authorized by their respective copyright holders.
+
+8. Acceptance
+
+By using, modifying, or distributing BahDoom, you agree to the terms of this license.
+
+---
+
+Copyright (c) 2026 BahDoom Contributors

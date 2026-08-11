@@ -1,115 +1,115 @@
-# BahDoom Engine
+BahDoom Engine
 
-Uma engine inspirada em **Doom**, desenvolvida do zero em **C**, com foco em aprendizado, arquitetura de engines, compatibilidade com o ecossistema Doom e multiplayer.
+An engine inspired by Doom, developed from scratch in C, with a focus on learning, engine architecture, compatibility with the Doom ecosystem, and multiplayer.
 
-O projeto nasceu da ideia de entender como uma engine de jogos funciona construindo cada camada gradualmente, desde o game loop e gerenciamento de memória até o carregamento de WADs, renderização e networking.
+The project was born from the idea of understanding how a game engine works by building each layer gradually, from the game loop and memory management to WAD loading, rendering, and networking.
 
-> **Status:** 🚧 Em desenvolvimento inicial
-
----
-
-## Objetivo
-
-O objetivo deste projeto é desenvolver uma engine Doom moderna, modular e extensível, mantendo compatibilidade com padrões de especificação já estabelecidos pela comunidade.
-
-O foco principal será:
-
-* **Multiplayer local com tela dividida**
-* **Multiplayer online funcional**
-* **Compatibilidade com especificações como MBF21 e ID24**
-* **Arquitetura modular**
-* **Ferramentas para análise e validação de WADs**
-* **Documentação clara e detalhada**
-* **Implementação em C para aprofundar o conhecimento de baixo nível**
-
-A ideia não é simplesmente criar outro source port, mas construir uma engine entendendo cada componente que a compõe.
+«Status: 🚧 Early development»
 
 ---
 
-## Principais objetivos
+Objective
 
-### Engine
+The goal of this project is to develop a modern Doom engine that is modular and extensible while maintaining compatibility with specification standards already established by the community.
+
+The main focus will be:
+
+* Local multiplayer with split-screen
+* Functional online multiplayer
+* Compatibility with specifications such as MBF21 and ID24
+* Modular architecture
+* Tools for WAD analysis and validation
+* Clear and detailed documentation
+* Implementation in C to deepen low-level programming knowledge
+
+The idea is not simply to create another source port, but to build an engine while understanding each component that makes it work.
+
+---
+
+Main Objectives
+
+Engine
 
 * [ ] Game loop
-* [ ] Sistema de tempo
-* [ ] Gerenciamento de memória
-* [ ] Sistema de arquivos
-* [ ] Sistema de logs
-* [ ] Configuração da engine
-* [ ] Console interno
+* [ ] Time system
+* [ ] Memory management
+* [ ] File system
+* [ ] Logging system
+* [ ] Engine configuration
+* [ ] Internal console
 
-### Plataforma
+Platform
 
-* [ ] Criação de janela
-* [ ] Teclado
+* [ ] Window creation
+* [ ] Keyboard
 * [ ] Mouse
 * [ ] Gamepads
-* [ ] Áudio
-* [ ] Suporte a diferentes sistemas operacionais
+* [ ] Audio
+* [ ] Support for different operating systems
 
-### WAD
+WAD
 
-* [ ] Leitura de IWAD
-* [ ] Leitura de PWAD
-* [ ] Sistema de lumps
-* [ ] Identificação de mapas
-* [ ] Leitura de VERTEXES
-* [ ] Leitura de LINEDEFS
-* [ ] Leitura de SIDEDEFS
-* [ ] Leitura de SECTORS
-* [ ] Leitura de THINGS
-* [ ] Leitura de NODES
-* [ ] Leitura de SSECTORS
-* [ ] Leitura de SEGS
+* [ ] IWAD loading
+* [ ] PWAD loading
+* [ ] Lump system
+* [ ] Map identification
+* [ ] VERTEXES reading
+* [ ] LINEDEFS reading
+* [ ] SIDEDEFS reading
+* [ ] SECTORS reading
+* [ ] THINGS reading
+* [ ] NODES reading
+* [ ] SSECTORS reading
+* [ ] SEGS reading
 
-### Gameplay
+Gameplay
 
-* [ ] Jogador
-* [ ] Movimento
-* [ ] Colisão
-* [ ] Armas
-* [ ] Munição
-* [ ] Itens
-* [ ] Monstros
-* [ ] Projéteis
-* [ ] Dano
-* [ ] Portas
-* [ ] Elevadores
-* [ ] Plataformas
-* [ ] Teletransportes
+* [ ] Player
+* [ ] Movement
+* [ ] Collision
+* [ ] Weapons
+* [ ] Ammunition
+* [ ] Items
+* [ ] Monsters
+* [ ] Projectiles
+* [ ] Damage
+* [ ] Doors
+* [ ] Elevators
+* [ ] Platforms
+* [ ] Teleporters
 * [ ] Switches
 
-### Renderização
+Rendering
 
-* [ ] Renderer inicial
-* [ ] Renderização de mapas
+* [ ] Initial renderer
+* [ ] Map rendering
 * [ ] BSP
-* [ ] Paredes
+* [ ] Walls
 * [ ] Flats
-* [ ] Texturas
+* [ ] Textures
 * [ ] Sprites
-* [ ] Visibilidade
-* [ ] Iluminação
+* [ ] Visibility
+* [ ] Lighting
 * [ ] HUD
 
-### Multiplayer
+Multiplayer
 
-* [ ] Multiplayer local
-* [ ] Split-screen para 2 jogadores
-* [ ] Split-screen para 3 jogadores
-* [ ] Split-screen para 4 jogadores
-* [ ] Cooperação
+* [ ] Local multiplayer
+* [ ] 2-player split-screen
+* [ ] 3-player split-screen
+* [ ] 4-player split-screen
+* [ ] Cooperative play
 * [ ] Deathmatch
-* [ ] Multiplayer LAN
-* [ ] Multiplayer online
+* [ ] LAN multiplayer
+* [ ] Online multiplayer
 * [ ] Client/Server
-* [ ] Servidor dedicado
-* [ ] Interpolação
-* [ ] Predição
-* [ ] Reconexão
+* [ ] Dedicated server
+* [ ] Interpolation
+* [ ] Prediction
+* [ ] Reconnection
 * [ ] Spectator
 
-### Compatibilidade
+Compatibility
 
 * [ ] Doom Vanilla
 * [ ] Boom
@@ -117,127 +117,120 @@ A ideia não é simplesmente criar outro source port, mas construir uma engine e
 * [ ] MBF21
 * [ ] ID24
 
-A compatibilidade será tratada como **especificações documentadas**, e não simplesmente como uma lista de funcionalidades.
+Compatibility will be treated as documented specifications, rather than simply as a list of features.
 
 ---
 
-# Arquitetura
+Architecture
 
-A engine será organizada em módulos independentes, buscando reduzir o acoplamento entre os diferentes sistemas.
+The engine will be organized into independent modules, aiming to reduce coupling between the different systems.
 
-Uma visão simplificada da arquitetura:
+A simplified view of the architecture:
 
-```text
-                    ┌──────────────────┐
-                    │     GAMEPLAY     │
-                    │ Doom / MBF21/... │
-                    └────────┬─────────┘
-                             │
-                    ┌────────▼─────────┐
-                    │      WORLD       │
-                    │ Map / Actors /   │
-                    │ Physics / State  │
-                    └────────┬─────────┘
-                             │
-          ┌──────────────────┼──────────────────┐
-          │                  │                  │
- ┌────────▼────────┐ ┌───────▼────────┐ ┌──────▼───────┐
- │    RENDERER     │ │     AUDIO      │ │   NETWORK    │
- └────────┬────────┘ └───────┬────────┘ └──────┬───────┘
-          │                  │                  │
-          └──────────────────┼──────────────────┘
-                             │
-                    ┌────────▼─────────┐
-                    │     PLATFORM     │
-                    │ Window / Input / │
-                    │ Controller / OS  │
-                    └────────┬─────────┘
-                             │
-                    ┌────────▼─────────┐
-                    │       CORE       │
-                    │ Memory / Time /  │
-                    │ Files / Logging  │
-                    └──────────────────┘
+```mermaid
+flowchart TB
+    GAME["GAMEPLAY<br/>Doom / MBF21 / Extensions"]
+
+    WORLD["WORLD<br/>Maps / Actors / Physics / State"]
+
+    RENDER["RENDERER<br/>2D / 3D / Software / Hardware"]
+    AUDIO["AUDIO<br/>SFX / Music / Mixing"]
+    NETWORK["NETWORK<br/>Netcode / Multiplayer"]
+
+    PLATFORM["PLATFORM<br/>Window / Input / Controller / OS"]
+
+    CORE["CORE<br/>Memory / Time / Files / Logging"]
+
+    GAME --> WORLD
+
+    WORLD --> RENDER
+    WORLD --> AUDIO
+    WORLD --> NETWORK
+
+    RENDER --> PLATFORM
+    AUDIO --> PLATFORM
+    NETWORK --> PLATFORM
+
+    CORE --> WORLD
+    CORE --> RENDER
+    CORE --> AUDIO
+    CORE --> NETWORK
+    CORE --> PLATFORM
 ```
 
-Um dos princípios do projeto será manter a **simulação do jogo independente da forma como os jogadores fornecem seus inputs**.
+One of the project's principles will be to keep the game simulation independent from the way players provide their inputs.
 
-Isso permitirá utilizar a mesma lógica para:
+This will make it possible to use the same logic for:
 
-```text
-Teclado
+Keyboard
    │
-Controle
+Controller
    │
    ├──► Singleplayer
    │
    ├──► Split-screen
    │
-   └──► Multiplayer online
-```
+   └──► Online multiplayer
 
 ---
 
-# Multiplayer First-Class
+Multiplayer First-Class
 
-Multiplayer não será tratado como uma funcionalidade adicionada posteriormente à engine.
+Multiplayer will not be treated as a feature added to the engine at a later stage.
 
-A arquitetura será planejada desde o início para permitir:
+The architecture will be planned from the beginning to support:
 
-```text
-                 GAME SIMULATION
-                        ▲
-                        │
-             ┌──────────┴──────────┐
-             │                     │
-        LOCAL INPUT           NETWORK INPUT
-             │                     │
-       ┌─────┴─────┐          ┌────┴─────┐
-       │           │          │          │
-   Keyboard    Controller   Client     Server
+```mermaid
+       flowchart BT
+    SIM["GAME SIMULATION"]
+
+    LOCAL["LOCAL INPUT"]
+    NETWORK["NETWORK INPUT"]
+
+    KEYBOARD["Keyboard"]
+    CONTROLLER["Controller"]
+
+    CLIENT["Client"]
+    SERVER["Server"]
+
+    KEYBOARD --> LOCAL
+    CONTROLLER --> LOCAL
+
+    CLIENT --> NETWORK
+    SERVER --> NETWORK
+
+    LOCAL --> SIM
+    NETWORK --> SIM
 ```
 
-A simulação deverá receber comandos de jogadores sem precisar saber necessariamente de onde eles vieram.
+The simulation should receive player commands without necessarily needing to know where they came from.
 
-Isso permitirá utilizar a mesma base para singleplayer, split-screen, LAN e multiplayer online.
+This will make it possible to use the same foundation for singleplayer, split-screen, LAN, and online multiplayer.
 
 ---
 
-# Split-screen
+Split-screen
 
-Um dos principais diferenciais planejados para a engine será o suporte nativo a multiplayer local.
+One of the main planned differentiators of the engine will be native local multiplayer support.
 
-O objetivo é permitir até quatro jogadores:
+The goal is to support up to four players (or more).
 
-```text
-┌───────────────────────┬───────────────────────┐
-│                       │                       │
-│       PLAYER 1        │       PLAYER 2        │
-│                       │                       │
-├───────────────────────┼───────────────────────┤
-│                       │                       │
-│       PLAYER 3        │       PLAYER 4        │
-│                       │                       │
-└───────────────────────┴───────────────────────┘
-```
+Each player should have:
 
-Cada jogador deverá possuir:
-
-* câmera independente;
-* HUD independente;
-* input independente;
-* estado de jogador independente;
-* áudio apropriado à sua perspectiva.
+* independent camera;
+* independent HUD;
+* independent input;
+* independent player state;
+* appropriate audio for their perspective.
 
 ---
 
-# Compatibilidade com WADs
+WAD Compatibility
 
-A engine pretende utilizar níveis de compatibilidade claramente definidos.
+The engine intends to use clearly defined compatibility levels.
 
-Exemplo conceitual:
+Conceptual example:
 
-```text
 Vanilla
    │
 Boom
@@ -247,23 +240,21 @@ MBF
 MBF21
    │
 ID24
-```
 
-A intenção é que um WAD tenha comportamento previsível de acordo com a especificação para a qual foi desenvolvido.
+The intention is for a WAD to behave predictably according to the specification it was developed for.
 
-A engine também poderá identificar e reportar recursos utilizados por um WAD.
+The engine may also identify and report resources used by a WAD.
 
 ---
 
-# Ferramentas
+Tools
 
-Um dos objetivos futuros é desenvolver ferramentas auxiliares para o ecossistema.
+One of the future goals is to develop auxiliary tools for the ecosystem.
 
-## WADCheck
+WADCheck
 
-Uma ferramenta planejada para analisar WADs:
+A planned tool for analyzing WADs:
 
-```text
 WADCheck mymap.wad
 
 WAD INFORMATION
@@ -289,32 +280,30 @@ Player 4 start   ✗
 Result
 ------
 MBF21 compatible
-```
 
-A ferramenta poderá futuramente verificar problemas comuns de compatibilidade e multiplayer.
-
----
-
-# Tecnologias
-
-Atualmente o projeto está sendo desenvolvido utilizando:
-
-* **C**
-* **CMake**
-* **CLion**
-* **Git**
-
-Bibliotecas e tecnologias externas serão adicionadas conforme a necessidade da engine.
-
-A camada de plataforma deverá utilizar uma biblioteca multiplataforma para lidar com janela, entrada, controles e outros recursos do sistema operacional.
+The tool may eventually check for common compatibility and multiplayer issues.
 
 ---
 
-# Estrutura do projeto
+Technologies
 
-A estrutura planejada é aproximadamente:
+The project is currently being developed using:
 
-```text
+* C
+* CMake
+* CLion
+* Git
+
+External libraries and technologies will be added as needed by the engine.
+
+The platform layer will use a cross-platform library to handle windowing, input, controllers, and other operating system features.
+
+---
+
+Project Structure
+
+The planned structure is approximately:
+
 DoomEngine/
 │
 ├── CMakeLists.txt
@@ -367,62 +356,61 @@ DoomEngine/
 │   └── networking.md
 │
 └── tests/
-```
 
-Essa estrutura ainda poderá mudar conforme a arquitetura evoluir.
+This structure may change as the architecture evolves.
 
 ---
 
-# Roadmap
+Roadmap
 
-## Phase 0 — Foundation
+Phase 0 — Foundation
 
-* [x] Criar repositório
-* [x] Configurar CMake
-* [x] Configurar ambiente de desenvolvimento
-* [x] Estrutura inicial da engine
-* [ ] Sistema de logging
+* [x] Create repository
+* [x] Configure CMake
+* [x] Configure development environment
+* [x] Initial engine structure
+* [ ] Logging system
 * [ ] Game loop
 
-## Phase 1 — Platform
+Phase 1 — Platform
 
-* [ ] Janela
+* [ ] Window
 * [ ] Input
 * [ ] Gamepad
 * [ ] Timer
-* [ ] Sistema básico de arquivos
+* [ ] Basic file system
 
-## Phase 2 — Renderer
+Phase 2 — Renderer
 
 * [ ] Framebuffer
-* [ ] Renderer básico
-* [ ] Câmera
-* [ ] Renderização de geometria simples
+* [ ] Basic renderer
+* [ ] Camera
+* [ ] Rendering of simple geometry
 
-## Phase 3 — WAD
+Phase 3 — WAD
 
 * [ ] WAD loader
 * [ ] Lump directory
-* [ ] Parser de mapas
-* [ ] Vértices
+* [ ] Map parser
+* [ ] Vertices
 * [ ] Linedefs
 * [ ] Sidedefs
 * [ ] Sectors
 * [ ] Things
 * [ ] BSP
 
-## Phase 4 — Doom
+Phase 4 — Doom
 
-* [ ] Primeiro mapa jogável
-* [ ] Movimento
-* [ ] Colisão
-* [ ] Armas
-* [ ] Inimigos
-* [ ] Itens
-* [ ] Interações
+* [ ] First playable map
+* [ ] Movement
+* [ ] Collision
+* [ ] Weapons
+* [ ] Enemies
+* [ ] Items
+* [ ] Interactions
 * [ ] HUD
 
-## Phase 5 — Compatibility
+Phase 5 — Compatibility
 
 * [ ] Vanilla
 * [ ] Boom
@@ -430,19 +418,19 @@ Essa estrutura ainda poderá mudar conforme a arquitetura evoluir.
 * [ ] MBF21
 * [ ] ID24
 
-## Phase 6 — Multiplayer
+Phase 6 — Multiplayer
 
-* [ ] Segundo jogador
+* [ ] Second player
 * [ ] Split-screen
-* [ ] 4 jogadores locais
-* [ ] Coop
+* [ ] 4 local players
+* [ ] Co-op
 * [ ] Deathmatch
 * [ ] LAN
 * [ ] Client/Server
 * [ ] Internet
 * [ ] Dedicated Server
 
-## Phase 7 — Tools
+Phase 7 — Tools
 
 * [ ] WADCheck
 * [ ] Debugger
@@ -452,13 +440,12 @@ Essa estrutura ainda poderá mudar conforme a arquitetura evoluir.
 
 ---
 
-# Documentação
+Documentation
 
-A documentação será mantida dentro do próprio projeto.
+Documentation will be maintained within the project itself.
 
-Planejamento inicial:
+Initial planning:
 
-```text
 docs/
 ├── architecture.md
 ├── game-loop.md
@@ -470,79 +457,105 @@ docs/
 ├── id24.md
 ├── networking.md
 └── multiplayer.md
+
+The documentation will also serve as a record of the technical decisions made during development.
+
+---
+
+Development Philosophy
+
+This project is, above all, a learning project.
+
+For this reason, some decisions may be less "practical" than simply using an existing engine or ready-made library.
+
+The goal is to understand:
+
+* how a game loop works;
+* how memory is organized;
+* how binary files are interpreted;
+* how maps are stored;
+* how BSP works;
+* how a renderer transforms data into pixels;
+* how a game simulation works;
+* how multiplayer synchronizes players;
+* how an engine can be organized into modules.
+
+Simple, understandable, and well-documented code will be prioritized whenever possible.
+
+---
+
+Contributions
+
+The project is still in its early stages, and significant architectural changes are expected.
+
+Contributions may be accepted as the engine matures.
+
+Before making major changes, it is recommended to open an issue to discuss the proposal.
+
+---
+
+Status
+
+This project is in early development and is not currently a functional replacement for other Doom source ports.
+
+APIs, architecture, internal formats, and code organization may change significantly during development.
+
+---
+
+License
+
+The BahDoom source code is licensed under the MIT License.
+
+This license applies only to original BahDoom code and other files explicitly identified as being part of the BahDoom project.
+
+Doom IWADs
+
+BahDoom does not include copyrighted Doom IWAD files such as "DOOM.WAD", "DOOM1.WAD", or "DOOM2.WAD".
+
+Users are responsible for obtaining any required IWADs from legitimate sources.
+
+BahDoom is an independent project and is not affiliated with, endorsed by, or officially associated with id Software or Bethesda Softworks.
+
+Third-Party Software
+
+BahDoom may use third-party libraries and software components. These components remain subject to their respective licenses.
+
+See "THIRD_PARTY_LICENSES.md" for details.
+
+Mods and WADs
+
+BahDoom may provide compatibility with Doom-family WADs, mods, map formats, and scripting systems.
+
+Compatibility with a format or technology does not imply ownership of, or permission to redistribute, copyrighted content created by third parties.
+
+Copyright and licensing of individual WADs, mods, assets, scripts, and other third-party content remain with their respective authors and copyright holders.
+
+For additional information, see the project's license files and documentation.
+
+---
+
+Vision
+
+In the long term, the intention is to build an engine capable of providing:
+
+```mermaid
+              flowchart TB
+    ENGINE["DOOM ENGINE"]
+
+    subgraph MODES["GAME MODES"]
+        SINGLE["SINGLEPLAYER"]
+        LOCAL["LOCAL<br/>SPLITSCREEN"]
+        ONLINE["ONLINE"]
+    end
+
+    subgraph COMPAT["WAD COMPATIBILITY"]
+        BOOM["BOOM"]
+        MBF21["MBF21"]
+        ID24["ID24"]
+    end
+
+    ENGINE --> MODES
+    ENGINE --> COMPAT
 ```
 
-A documentação também servirá como registro das decisões técnicas tomadas durante o desenvolvimento.
-
----
-
-# Filosofia de desenvolvimento
-
-Este projeto é, antes de tudo, um projeto de aprendizado.
-
-Por isso, algumas decisões podem ser menos "práticas" do que simplesmente utilizar uma engine ou biblioteca pronta.
-
-O objetivo é entender:
-
-* como um game loop funciona;
-* como a memória é organizada;
-* como arquivos binários são interpretados;
-* como mapas são armazenados;
-* como o BSP funciona;
-* como um renderer transforma dados em pixels;
-* como uma simulação de jogo funciona;
-* como multiplayer sincroniza jogadores;
-* como uma engine pode ser organizada em módulos.
-
-Código simples, compreensível e bem documentado será priorizado sempre que possível.
-
----
-
-# Contribuições
-
-O projeto ainda está em estágio inicial e mudanças significativas na arquitetura são esperadas.
-
-Contribuições poderão ser aceitas conforme a engine amadurecer.
-
-Antes de grandes alterações, é recomendável abrir uma issue para discutir a proposta.
-
----
-
-# Status
-
-Este projeto está em desenvolvimento inicial e **não é atualmente um substituto funcional para outros source ports de Doom**.
-
-APIs, arquitetura, formatos internos e organização de código podem mudar significativamente durante o desenvolvimento.
-
----
-
-# Licença
-
-A licença do projeto ainda será definida.
-
-Este projeto é uma implementação independente inspirada na tecnologia e nos conceitos do Doom. Os arquivos de jogos originais de Doom não fazem parte deste repositório.
-
----
-
-## Visão
-
-A longo prazo, a intenção é chegar a uma engine capaz de oferecer:
-
-```text
-              DOOM ENGINE
-                   │
-       ┌───────────┼───────────┐
-       │           │           │
-   SINGLEPLAYER  LOCAL       ONLINE
-       │       SPLITSCREEN    │
-       │           │           │
-       └───────────┼───────────┘
-                   │
-              WAD SUPPORT
-                   │
-        ┌──────────┼──────────┐
-        │          │          │
-      BOOM       MBF21      ID24
-```
-
-Uma engine que priorize **compatibilidade, multiplayer e previsibilidade**, sem perder a simplicidade e a filosofia que fizeram Doom continuar relevante décadas depois de seu lançamento.
+An engine that prioritizes compatibility, multiplayer, and predictability, without losing the simplicity and philosophy that have kept Doom relevant decades after its release.

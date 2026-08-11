@@ -8,25 +8,25 @@ O projeto nasceu da ideia de entender como uma engine de jogos funciona construi
 
 ---
 
-## 🎯 Objetivo
+## Objetivo
 
 O objetivo deste projeto é desenvolver uma engine Doom moderna, modular e extensível, mantendo compatibilidade com padrões de especificação já estabelecidos pela comunidade.
 
 O foco principal será:
 
-* 🎮 **Multiplayer local com tela dividida**
-* 🌐 **Multiplayer online funcional**
-* 📦 **Compatibilidade com especificações como MBF21 e ID24**
-* 🧩 **Arquitetura modular**
-* 🔧 **Ferramentas para análise e validação de WADs**
-* 📚 **Documentação clara e detalhada**
-* ⚙️ **Implementação em C para aprofundar o conhecimento de baixo nível**
+* **Multiplayer local com tela dividida**
+* **Multiplayer online funcional**
+* **Compatibilidade com especificações como MBF21 e ID24**
+* **Arquitetura modular**
+* **Ferramentas para análise e validação de WADs**
+* **Documentação clara e detalhada**
+* **Implementação em C para aprofundar o conhecimento de baixo nível**
 
 A ideia não é simplesmente criar outro source port, mas construir uma engine entendendo cada componente que a compõe.
 
 ---
 
-## 🚀 Principais objetivos
+## Principais objetivos
 
 ### Engine
 
@@ -121,7 +121,7 @@ A compatibilidade será tratada como **especificações documentadas**, e não s
 
 ---
 
-# 🏗️ Arquitetura
+# Arquitetura
 
 A engine será organizada em módulos independentes, buscando reduzir o acoplamento entre os diferentes sistemas.
 
@@ -178,7 +178,7 @@ Controle
 
 ---
 
-# 🎮 Multiplayer First-Class
+# Multiplayer First-Class
 
 Multiplayer não será tratado como uma funcionalidade adicionada posteriormente à engine.
 
@@ -203,7 +203,7 @@ Isso permitirá utilizar a mesma base para singleplayer, split-screen, LAN e mul
 
 ---
 
-# 🖥️ Split-screen
+# Split-screen
 
 Um dos principais diferenciais planejados para a engine será o suporte nativo a multiplayer local.
 
@@ -231,7 +231,7 @@ Cada jogador deverá possuir:
 
 ---
 
-# 📦 Compatibilidade com WADs
+# Compatibilidade com WADs
 
 A engine pretende utilizar níveis de compatibilidade claramente definidos.
 
@@ -255,7 +255,7 @@ A engine também poderá identificar e reportar recursos utilizados por um WAD.
 
 ---
 
-# 🔍 Ferramentas
+# Ferramentas
 
 Um dos objetivos futuros é desenvolver ferramentas auxiliares para o ecossistema.
 
@@ -295,7 +295,7 @@ A ferramenta poderá futuramente verificar problemas comuns de compatibilidade e
 
 ---
 
-# 🛠️ Tecnologias
+# Tecnologias
 
 Atualmente o projeto está sendo desenvolvido utilizando:
 
@@ -310,7 +310,7 @@ A camada de plataforma deverá utilizar uma biblioteca multiplataforma para lida
 
 ---
 
-# 📁 Estrutura do projeto
+# Estrutura do projeto
 
 A estrutura planejada é aproximadamente:
 
@@ -373,7 +373,7 @@ Essa estrutura ainda poderá mudar conforme a arquitetura evoluir.
 
 ---
 
-# 🗺️ Roadmap
+# Roadmap
 
 ## Phase 0 — Foundation
 
@@ -452,7 +452,7 @@ Essa estrutura ainda poderá mudar conforme a arquitetura evoluir.
 
 ---
 
-# 📚 Documentação
+# Documentação
 
 A documentação será mantida dentro do próprio projeto.
 
@@ -476,7 +476,7 @@ A documentação também servirá como registro das decisões técnicas tomadas 
 
 ---
 
-# 🧪 Filosofia de desenvolvimento
+# Filosofia de desenvolvimento
 
 Este projeto é, antes de tudo, um projeto de aprendizado.
 
@@ -498,7 +498,7 @@ Código simples, compreensível e bem documentado será priorizado sempre que po
 
 ---
 
-# 🤝 Contribuições
+# Contribuições
 
 O projeto ainda está em estágio inicial e mudanças significativas na arquitetura são esperadas.
 
@@ -508,7 +508,7 @@ Antes de grandes alterações, é recomendável abrir uma issue para discutir a 
 
 ---
 
-# ⚠️ Status
+# Status
 
 Este projeto está em desenvolvimento inicial e **não é atualmente um substituto funcional para outros source ports de Doom**.
 
@@ -516,7 +516,7 @@ APIs, arquitetura, formatos internos e organização de código podem mudar sign
 
 ---
 
-# 📜 Licença
+# Licença
 
 A licença do projeto ainda será definida.
 
@@ -524,7 +524,7 @@ Este projeto é uma implementação independente inspirada na tecnologia e nos c
 
 ---
 
-## 💡 Visão
+## Visão
 
 A longo prazo, a intenção é chegar a uma engine capaz de oferecer:
 

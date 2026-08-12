@@ -173,15 +173,18 @@ One of the project's principles will be to keep the game simulation independent 
 
 This will make it possible to use the same logic for:
 
-Keyboard
-   │
-Controller
-   │
-   ├──► Singleplayer
-   │
-   ├──► Split-screen
-   │
-   └──► Online multiplayer
+```mermaid
+flowchart TD
+    Keyboard[Keyboard]
+    Controller[Controller]
+
+    Keyboard --> Input{Input System}
+    Controller --> Input
+
+    Input --> Singleplayer[Singleplayer]
+    Input --> Splitscreen[Split-screen]
+    Input --> Online[Online Multiplayer]
+```
 
 ---
 
@@ -242,15 +245,19 @@ The engine intends to use clearly defined compatibility levels.
 
 Conceptual example:
 
-Vanilla
-   │
-Boom
-   │
-MBF
-   │
-MBF21
-   │
-ID24
+```mermaid
+flowchart TD
+    Vanilla["Vanilla Doom"]
+    Boom["Boom"]
+    MBF["MBF"]
+    MBF21["MBF21"]
+    ID24["ID24"]
+
+    Vanilla -->|Extension| Boom
+    Boom -->|Extension| MBF
+    MBF -->|Extension| MBF21
+    MBF21 -->|Extension| ID24
+```
 
 The intention is for a WAD to behave predictably according to the specification it was developed for.
 
@@ -266,6 +273,7 @@ WADCheck
 
 A planned tool for analyzing WADs:
 
+```
 WADCheck mymap.wad
 
 WAD INFORMATION
@@ -291,6 +299,7 @@ Player 4 start   ✗
 Result
 ------
 MBF21 compatible
+```
 
 The tool may eventually check for common compatibility and multiplayer issues.
 
@@ -315,6 +324,7 @@ Project Structure
 
 The planned structure is approximately:
 
+```
 DoomEngine/
 │
 ├── CMakeLists.txt
@@ -367,6 +377,7 @@ DoomEngine/
 │   └── networking.md
 │
 └── tests/
+```
 
 This structure may change as the architecture evolves.
 
@@ -457,6 +468,7 @@ Documentation will be maintained within the project itself.
 
 Initial planning:
 
+```
 docs/
 ├── architecture.md
 ├── game-loop.md
@@ -468,6 +480,7 @@ docs/
 ├── id24.md
 ├── networking.md
 └── multiplayer.md
+````
 
 The documentation will also serve as a record of the technical decisions made during development.
 

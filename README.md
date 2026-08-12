@@ -30,7 +30,7 @@ The idea is not simply to create another source port, but to build an engine whi
 
 Engine
 
-* [ ] Game loop
+* [x] Game loop
 * [ ] Time system
 * [ ] Memory management
 * [ ] File system
@@ -384,7 +384,7 @@ Phase 0 — Foundation
 * [x] Configure development environment
 * [x] Initial engine structure
 * [ ] Logging system
-* [ ] Game loop
+* [x] Game loop
 
 Phase 1 — Platform
 

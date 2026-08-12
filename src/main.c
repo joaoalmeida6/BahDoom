@@ -1,9 +1,16 @@
 #include <stdio.h>
-#include <locale.h>
+#include "core/engine.h"
 
-int main(void) {
-    setlocale(LC_ALL, "Portuguese_Brazil.1252");
+int main(void)
+{
 
+    printf("Doom Engine\n");
 
+    engine_init();
+
+    engine_run();
+
+    engine_shutdown();
+    
     return 0;
 }

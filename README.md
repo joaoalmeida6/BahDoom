@@ -1,4 +1,4 @@
-BahDoom Engine
+# --- BahDoom Engine ---
 
 An engine inspired by Doom, developed from scratch in C, with a focus on learning, engine architecture, compatibility with the Doom ecosystem, and multiplayer.
 
@@ -6,9 +6,9 @@ The project was born from the idea of understanding how a game engine works by b
 
 «Status: 🚧 Early development»
 
----
 
-Objective
+
+# Objective
 
 The goal of this project is to develop a modern Doom engine that is modular and extensible while maintaining compatibility with specification standards already established by the community.
 
@@ -24,9 +24,9 @@ The main focus will be:
 
 The idea is not simply to create another source port, but to build an engine while understanding each component that makes it work.
 
----
 
-Main Objectives
+
+# Main Objectives
 
 Engine
 
@@ -130,12 +130,11 @@ Crazy Ideas (For Me)
 * [ ] ACS
 * [ ] Zscript (probably impossible and time demanding)
 
----
 
-Architecture
+
+# Architecture
 
 The engine will be organized into independent modules, aiming to reduce coupling between the different systems.
-
 A simplified view of the architecture:
 
 ```mermaid
@@ -170,7 +169,6 @@ flowchart TB
 ```
 
 One of the project's principles will be to keep the game simulation independent from the way players provide their inputs.
-
 This will make it possible to use the same logic for:
 
 ```mermaid
@@ -186,12 +184,11 @@ flowchart TD
     Input --> Online[Online Multiplayer]
 ```
 
----
 
-Multiplayer First-Class
+
+# Multiplayer First-Class
 
 Multiplayer will not be treated as a feature added to the engine at a later stage.
-
 The architecture will be planned from the beginning to support:
 
 ```mermaid
@@ -218,17 +215,14 @@ The architecture will be planned from the beginning to support:
 ```
 
 The simulation should receive player commands without necessarily needing to know where they came from.
-
 This will make it possible to use the same foundation for singleplayer, split-screen, LAN, and online multiplayer.
 
----
 
-Split-screen
+
+# Split-screen
 
 One of the main planned differentiators of the engine will be native local multiplayer support.
-
 The goal is to support up to four players (or more).
-
 Each player should have:
 
 * independent camera;
@@ -237,12 +231,11 @@ Each player should have:
 * independent player state;
 * appropriate audio for their perspective.
 
----
 
-WAD Compatibility
+
+# WAD Compatibility
 
 The engine intends to use clearly defined compatibility levels.
-
 Conceptual example:
 
 ```mermaid
@@ -260,12 +253,11 @@ flowchart TD
 ```
 
 The intention is for a WAD to behave predictably according to the specification it was developed for.
-
 The engine may also identify and report resources used by a WAD.
 
----
 
-Tools
+
+# Tools
 
 One of the future goals is to develop auxiliary tools for the ecosystem.
 
@@ -303,9 +295,9 @@ MBF21 compatible
 
 The tool may eventually check for common compatibility and multiplayer issues.
 
----
 
-Technologies
+
+# Technologies
 
 The project is currently being developed using:
 
@@ -315,12 +307,11 @@ The project is currently being developed using:
 * Git
 
 External libraries and technologies will be added as needed by the engine.
-
 The platform layer will use a cross-platform library to handle windowing, input, controllers, and other operating system features.
 
----
 
-Project Structure
+
+# Project Structure
 
 The planned structure is approximately:
 
@@ -381,9 +372,9 @@ DoomEngine/
 
 This structure may change as the architecture evolves.
 
----
 
-Roadmap
+
+# Roadmap
 
 Phase 0 — Foundation
 
@@ -460,12 +451,11 @@ Phase 7 — Tools
 * [ ] Profiler
 * [ ] Compatibility reports
 
----
 
-Documentation
+
+# Documentation
 
 Documentation will be maintained within the project itself.
-
 Initial planning:
 
 ```
@@ -484,14 +474,12 @@ docs/
 
 The documentation will also serve as a record of the technical decisions made during development.
 
----
 
-Development Philosophy
+
+# Development Philosophy
 
 This project is, above all, a learning project.
-
 For this reason, some decisions may be less "practical" than simply using an existing engine or ready-made library.
-
 The goal is to understand:
 
 * how a game loop works;
@@ -506,59 +494,46 @@ The goal is to understand:
 
 Simple, understandable, and well-documented code will be prioritized whenever possible.
 
----
 
-Contributions
+
+# Contributions
 
 The project is still in its early stages, and significant architectural changes are expected.
-
 Contributions may be accepted as the engine matures.
-
 Before making major changes, it is recommended to open an issue to discuss the proposal.
 
----
 
-Status
+
+# Status
 
 This project is in early development and is not currently a functional replacement for other Doom source ports.
-
 APIs, architecture, internal formats, and code organization may change significantly during development.
 
----
 
-License
 
-The BahDoom source code is licensed under the MIT License.
+# -- License --
 
+The BahDoom source code is licensed under the GNU GPLv3 License.
 This license applies only to original BahDoom code and other files explicitly identified as being part of the BahDoom project.
 
 Doom IWADs
-
 BahDoom does not include copyrighted Doom IWAD files such as "DOOM.WAD", "DOOM1.WAD", or "DOOM2.WAD".
-
 Users are responsible for obtaining any required IWADs from legitimate sources.
-
 BahDoom is an independent project and is not affiliated with, endorsed by, or officially associated with id Software or Bethesda Softworks.
 
 Third-Party Software
-
 BahDoom may use third-party libraries and software components. These components remain subject to their respective licenses.
-
 See "THIRD_PARTY_LICENSES.md" for details.
 
 Mods and WADs
-
 BahDoom may provide compatibility with Doom-family WADs, mods, map formats, and scripting systems.
-
 Compatibility with a format or technology does not imply ownership of, or permission to redistribute, copyrighted content created by third parties.
-
 Copyright and licensing of individual WADs, mods, assets, scripts, and other third-party content remain with their respective authors and copyright holders.
-
 For additional information, see the project's license files and documentation.
 
----
 
-Vision
+
+# Vision
 
 In the long term, the intention is to build an engine capable of providing:
 

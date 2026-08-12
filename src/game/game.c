@@ -16,11 +16,11 @@ void game_init(void)
 }
 
 //update game
-void game_update(double delta_time)
+void game_update(double tic_delta)
 {
     //update player position
-    player_position += player_speed * delta_time;
-    printf("Game Update: %.6f\n", delta_time);
+    player_position += player_speed * tic_delta;
+    printf("Game Update: %.6f\n", tic_delta);
 }
 
 //shutdown game

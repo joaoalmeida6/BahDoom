@@ -7,5 +7,7 @@ void engine_init(void);
 void engine_run(void);
 //shutdown engine
 void engine_shutdown(void);
+//engine quit
+void engine_quit(void);
 
 #endif

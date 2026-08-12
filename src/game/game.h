@@ -5,12 +5,12 @@
 #ifndef BAHDOOM_GAME_H
 #define BAHDOOM_GAME_H
 
-#define GAME_TICK_RATE 35.0
+#define GAME_TICK_RATE 35
 
 //initialize game
 void game_init(void);
 //update game
-void game_update(double delta_time);
+void game_update(double tic_delta);
 //shutdown game
 void game_shutdown(void);
 

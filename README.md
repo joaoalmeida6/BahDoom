@@ -119,7 +119,7 @@ Compatibility
 
 Compatibility will be treated as documented specifications, rather than simply as a list of features.
 
-Crazy Ideas (For Me)
+Experimental
 
 * [ ] Profile System
 * [ ] Achievements System
@@ -251,6 +251,7 @@ flowchart TD
     MBF -->|Extension| MBF21
     MBF21 -->|Extension| ID24
 ```
+*This diagram represents the intended compatibility model and is not a complete representation of the historical or technical relationships between specifications.*
 
 The intention is for a WAD to behave predictably according to the specification it was developed for.
 The engine may also identify and report resources used by a WAD.

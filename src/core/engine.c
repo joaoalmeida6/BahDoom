@@ -29,7 +29,7 @@ void engine_init(void)
     engine.initialized = 1;
 
     //initialize platform module
-    if (platform_init())
+    if (!platform_init())
     {
         engine.running = 0;
         engine.initialized = 0;

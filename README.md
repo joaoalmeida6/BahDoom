@@ -119,6 +119,17 @@ Compatibility
 
 Compatibility will be treated as documented specifications, rather than simply as a list of features.
 
+Crazy Ideas (For Me)
+
+* [ ] Profile System
+* [ ] Achievements System
+* [ ] Modern Multiplayer
+* [ ] Built-in PWAD/WAD loader & manager
+* [ ] Wad Downloader
+* [ ] System for distributing current wads/mods (with creators' consent)
+* [ ] ACS
+* [ ] Zscript (probably impossible and time demanding)
+
 ---
 
 Architecture

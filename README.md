@@ -28,20 +28,25 @@ The idea is not simply to create another source port, but to build an engine whi
 
 # Main Objectives
 
+Legend:
+* [ ] - To do
+* [x] - Done
+* [~] - Under making
+
 Engine
 
 * [x] Game loop
 * [ ] Time system
 * [ ] Memory management
 * [ ] File system
-* [ ] Logging system
+* [x] Logging system
 * [ ] Engine configuration
 * [ ] Internal console
 
 Platform
 
-* [ ] Window creation
-* [ ] Keyboard
+* [x] Window creation
+* [~] Keyboard
 * [ ] Mouse
 * [ ] Gamepads
 * [ ] Audio
@@ -377,19 +382,24 @@ This structure may change as the architecture evolves.
 
 # Roadmap
 
+Legend:
+* [ ] - To do
+* [x] - Done
+* [~] - Under making
+* 
 Phase 0 — Foundation
 
 * [x] Create repository
 * [x] Configure CMake
 * [x] Configure development environment
 * [x] Initial engine structure
-* [ ] Logging system
+* [x] Logging system
 * [x] Game loop
 
 Phase 1 — Platform
 
-* [ ] Window
-* [ ] Input
+* [x] Window
+* [~] Input
 * [ ] Gamepad
 * [ ] Timer
 * [ ] Basic file system

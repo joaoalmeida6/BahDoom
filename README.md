@@ -310,6 +310,7 @@ The project is currently being developed using:
 * C
 * CMake
 * CLion
+* SDL3
 * Git
 
 External libraries and technologies will be added as needed by the engine.
@@ -386,7 +387,7 @@ Legend:
 * [ ] - To do
 * [x] - Done
 * 🛠️ - Under making
-* 
+
 Phase 0 — Foundation
 
 * [x] Create repository

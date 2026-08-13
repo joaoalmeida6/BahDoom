@@ -1,12 +1,17 @@
-# --- BahDoom Engine ---
+<p align="center">
+  <img src="assets/branding/bahdoom-banner.png" alt="BahDoom">
+</p>
 
-An engine inspired by Doom, developed from scratch in C, with a focus on learning, engine architecture, compatibility with the Doom ecosystem, and multiplayer.
+<h1 align="center">BahDoom Engine</h1>
 
+<p align="center">
+  An engine inspired by Doom, developed from scratch in C, with a focus on learning, engine architecture, compatibility with the Doom ecosystem, and multiplayer.
 The project was born from the idea of understanding how a game engine works by building each layer gradually, from the game loop and memory management to WAD loading, rendering, and networking.
+</p>
 
-«Status: 🚧 Early development»
-
-
+<p align="center">
+ «Status: 🚧 Early development».
+</p>
 
 # Objective
 

@@ -10,12 +10,12 @@ static EngineState engine;
 
 static void process_input(void)
 {
-    printf("Input\n");
+
 }
 
 static void render(void)
 {
-    printf("Render\n");
+
 }
 
 //initialize engine
@@ -46,9 +46,6 @@ void engine_init(void)
 //run engine
 void engine_run(void)
 {
-    //test engine state
-    static int test_ticks = 0;
-
     double accumulator = 0.0;
     const double tick_duration = 1.0 / GAME_TICK_RATE;
 
@@ -61,6 +58,13 @@ void engine_run(void)
 
         platform_process_events();
 
+        //check platform event
+        PlatformEvent event = platform_process_events();
+        if (event == PLATFORM_EVENT_QUIT)
+        {
+            engine_quit();
+        }
+
         process_input();
 
         while (accumulator >= tick_duration)
@@ -69,13 +73,6 @@ void engine_run(void)
             game_update(tick_duration);
 
             accumulator -= tick_duration;
-
-            //test game state
-            test_ticks++;
-            if (test_ticks >= 100)
-            {
-                engine_quit();
-            }
         }
         render();
     }

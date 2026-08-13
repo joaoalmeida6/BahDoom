@@ -5,10 +5,18 @@
 #ifndef BAHDOOM_PLATFORM_H
 #define BAHDOOM_PLATFORM_H
 
+//platform event enum
+typedef enum
+{
+    PLATFORM_EVENT_NONE,
+    PLATFORM_EVENT_QUIT
+
+} PlatformEvent;
+
 //initialize platform module
 int platform_init(void);
 //process platform events
-void platform_process_events(void);
+PlatformEvent platform_process_events(void);
 //shutdown platform module
 void platform_shutdown(void);
 

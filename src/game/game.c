@@ -20,7 +20,6 @@ void game_update(double tic_delta)
 {
     //update player position
     player_position += player_speed * tic_delta;
-    printf("Game Update: %.6f\n", tic_delta);
 }
 
 //shutdown game

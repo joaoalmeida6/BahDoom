@@ -31,7 +31,7 @@ The idea is not simply to create another source port, but to build an engine whi
 Legend:
 * [ ] - To do
 * [x] - Done
-* [~] - Under making
+* 🛠️ - Under making
 
 Engine
 
@@ -46,7 +46,7 @@ Engine
 Platform
 
 * [x] Window creation
-* [~] Keyboard
+* 🛠️ Keyboard
 * [ ] Mouse
 * [ ] Gamepads
 * [ ] Audio
@@ -385,7 +385,7 @@ This structure may change as the architecture evolves.
 Legend:
 * [ ] - To do
 * [x] - Done
-* [~] - Under making
+* 🛠️ - Under making
 * 
 Phase 0 — Foundation
 
@@ -399,7 +399,7 @@ Phase 0 — Foundation
 Phase 1 — Platform
 
 * [x] Window
-* [~] Input
+* 🛠️ Input
 * [ ] Gamepad
 * [ ] Timer
 * [ ] Basic file system

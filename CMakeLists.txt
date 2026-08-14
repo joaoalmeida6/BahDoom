@@ -29,6 +29,12 @@ add_executable(BahDoom
         src/core/engine_state.h
         src/platform/platform.c
         src/platform/platform.h
+        src/platform/keyboard.c
+        src/platform/keyboard.h
+        src/input/input.c
+        src/input/input.h
+        resources/bahdoom.rc
+        resources/bahdoom-icon.ico
 )
 
 target_link_libraries(BahDoom PRIVATE SDL3::SDL3)

@@ -7,6 +7,8 @@
 
 #include "platform.h"
 
+#include "keyboard.h"
+
 //platform window
 static SDL_Window *window = NULL;
 
@@ -38,6 +40,8 @@ int platform_init(void)
         return 0;
     }
 
+    keyboard_init();
+
     printf("Platform Init\n");
     printf("BahDoom Window Created\n");
 
@@ -59,14 +63,25 @@ PlatformEvent platform_process_events(void)
             printf("Quit Event\n");
             return PLATFORM_EVENT_QUIT;
         }
+        //process keyboard event
+        keyboard_process_event(&event);
     }
 
     return PLATFORM_EVENT_NONE;
 }
 
+//set window title
+void platform_set_window_title(const char *title)
+{
+    if (window != NULL){
+        SDL_SetWindowTitle(window, title);
+    }
+}
 //shutdown platform module
 void platform_shutdown(void)
 {
+    keyboard_shutdown();
+
     //destroy window
     if (window != NULL)
     {

@@ -1,12 +1,17 @@
-# --- BahDoom Engine ---
+<p align="center">
+  <img src="assets/branding/bahdoom-banner.png" alt="BahDoom">
+</p>
 
-An engine inspired by Doom, developed from scratch in C, with a focus on learning, engine architecture, compatibility with the Doom ecosystem, and multiplayer.
+<h1 align="center">BahDoom Engine</h1>
 
+<p align="center">
+  An engine inspired by Doom, developed from scratch in C, with a focus on learning, engine architecture, compatibility with the Doom ecosystem, and multiplayer.
 The project was born from the idea of understanding how a game engine works by building each layer gradually, from the game loop and memory management to WAD loading, rendering, and networking.
+</p>
 
-«Status: 🚧 Early development»
-
-
+<p align="center">
+ «Status: 🚧 Early development».
+</p>
 
 # Objective
 
@@ -28,20 +33,25 @@ The idea is not simply to create another source port, but to build an engine whi
 
 # Main Objectives
 
+Legend:
+* [ ] - To do
+* [x] - Done
+* 🛠️ - Under making
+
 Engine
 
 * [x] Game loop
-* [ ] Time system
+* [x] Time system
 * [ ] Memory management
 * [ ] File system
-* [ ] Logging system
+* [x] Logging system
 * [ ] Engine configuration
 * [ ] Internal console
 
 Platform
 
-* [ ] Window creation
-* [ ] Keyboard
+* [x] Window creation
+* 🛠️ Keyboard
 * [ ] Mouse
 * [ ] Gamepads
 * [ ] Audio
@@ -305,6 +315,7 @@ The project is currently being developed using:
 * C
 * CMake
 * CLion
+* SDL3
 * Git
 
 External libraries and technologies will be added as needed by the engine.
@@ -377,19 +388,24 @@ This structure may change as the architecture evolves.
 
 # Roadmap
 
+Legend:
+* [ ] - To do
+* [x] - Done
+* 🛠️ - Under making
+
 Phase 0 — Foundation
 
 * [x] Create repository
 * [x] Configure CMake
 * [x] Configure development environment
 * [x] Initial engine structure
-* [ ] Logging system
+* [x] Logging system
 * [x] Game loop
 
 Phase 1 — Platform
 
-* [ ] Window
-* [ ] Input
+* [x] Window
+* 🛠️ Input
 * [ ] Gamepad
 * [ ] Timer
 * [ ] Basic file system

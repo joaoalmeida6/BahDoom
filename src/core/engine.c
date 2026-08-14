@@ -4,13 +4,18 @@
 #include "../game/game.h"
 #include "engine_state.h"
 #include "../platform/platform.h"
+#include "../platform/keyboard.h"
+#include "../input/input.h"
 
 //engine state
 static EngineState engine;
 
 static void process_input(void)
 {
-
+    if (keyboard_is_pressed(KEY_ESCAPE))
+    {
+        engine_quit();
+    }
 }
 
 static void render(void)
@@ -56,7 +61,7 @@ void engine_run(void)
 
         accumulator += delta_time;
 
-        platform_process_events();
+        keyboard_update();
 
         //check platform event
         PlatformEvent event = platform_process_events();
@@ -66,6 +71,26 @@ void engine_run(void)
         }
 
         process_input();
+
+        if (input_action_down(ACTION_MOVE_FORWARD))
+        {
+            printf("MOVE_FORWARD\n");
+        }
+
+        if (input_action_down(ACTION_MOVE_BACKWARD))
+        {
+            printf("MOVE_BACKWARD\n");
+        }
+
+        if (input_action_down(ACTION_MOVE_LEFT))
+        {
+            printf("MOVE_LEFT\n");
+        }
+
+        if (input_action_down(ACTION_MOVE_RIGHT))
+        {
+            printf("MOVE_RIGHT\n");
+        }
 
         while (accumulator >= tick_duration)
         {

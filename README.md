@@ -41,7 +41,7 @@ Legend:
 Engine
 
 * [x] Game loop
-* [ ] Time system
+* [x] Time system
 * [ ] Memory management
 * [ ] File system
 * [x] Logging system

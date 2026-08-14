@@ -17,6 +17,8 @@ typedef enum
 int platform_init(void);
 //process platform events
 PlatformEvent platform_process_events(void);
+//set window title
+void platform_set_window_title(const char *title);
 //shutdown platform module
 void platform_shutdown(void);
 

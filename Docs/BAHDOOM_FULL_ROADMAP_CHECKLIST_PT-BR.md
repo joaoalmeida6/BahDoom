@@ -44,30 +44,30 @@
 
 ## Input
 
-- [ ] criar `input/input.h`;
-- [ ] criar `input/input.c`;
-- [ ] definir ações;
-- [ ] mapear teclado para ações;
-- [ ] separar tecla física de ação;
-- [ ] implementar consulta de ação;
-- [ ] implementar estado DOWN;
-- [ ] implementar estado PRESSED;
-- [ ] implementar estado RELEASED;
-- [ ] preparar arquitetura para rebinding.
-- [ ] move forward;
-- [ ] move backward;
-- [ ] move left;
-- [ ] move right;
-- [ ] turn left;
-- [ ] turn right;
-- [ ] fire;
-- [ ] use;
-- [ ] menu;
-- [ ] pause.
+- [x] criar `input/input.h`;
+- [x] criar `input/input.c`;
+- [x] definir ações;
+- [x] mapear teclado para ações;
+- [x] separar tecla física de ação;
+- [x] implementar consulta de ação;
+- [x] implementar estado DOWN;
+- [x] implementar estado PRESSED;
+- [x] implementar estado RELEASED;
+- [x] preparar arquitetura para rebinding.
+- [x] move forward;
+- [x] move backward;
+- [x] move left;
+- [x] move right;
+- [x] turn left;
+- [x] turn right;
+- [x] fire;
+- [x] use;
+- [x] menu;
+- [x] pause.
 
 ## Player Commands
 
-- [ ] criar estrutura de comando;
+- [x] criar estrutura de comando;
 - [ ] separar input físico de comando;
 - [ ] definir movimento;
 - [ ] definir rotação;

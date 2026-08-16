@@ -37,7 +37,7 @@ int keyboard_is_pressed(KeyboardKey key);
 int keyboard_is_released(KeyboardKey key);
 
 //shutdown keyboard module
-int keyboard_shutdown(void);
+void keyboard_shutdown(void);
 
 
 #endif //BAHDOOM_KEYBOARD_H

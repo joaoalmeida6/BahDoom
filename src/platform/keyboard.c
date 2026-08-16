@@ -95,10 +95,9 @@ int keyboard_is_released(KeyboardKey key)
            !current_keys[key] && previous_keys[key];
 }
 
-int keyboard_shutdown(void)
+void keyboard_shutdown(void)
 {
     memset(current_keys, 0, sizeof(current_keys));
     memset(previous_keys, 0, sizeof(previous_keys));
 
-    return 1;
 }

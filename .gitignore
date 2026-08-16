@@ -1,0 +1,15 @@
+# CMake build directories
+cmake-build-*/
+
+# CLion
+.idea/
+
+# Compiled binaries
+*.exe
+*.dll
+*.obj
+*.o
+
+# Temporary files
+*.tmp
+*.log

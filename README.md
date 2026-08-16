@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/branding/bahdoom-banner.png" alt="BahDoom">
+  <img src="resources/bahdoom-banner.png" alt="BahDoom">
 </p>
 
 <h1 align="center">BahDoom Engine</h1>

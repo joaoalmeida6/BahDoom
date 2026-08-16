@@ -35,3 +35,23 @@ int input_action_down(InputAction action)
 
     return keyboard_is_down(key);
 }
+
+int input_action_pressed(InputAction action)
+{
+    int key = action_key(action);
+
+    if (key == -1)
+        return 0;
+
+    return keyboard_is_pressed(key);
+}
+
+int input_action_released(InputAction action)
+{
+    int key = action_key(action);
+
+    if (key == -1)
+        return 0;
+
+    return keyboard_is_released(key);
+}

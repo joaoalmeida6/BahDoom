@@ -5,7 +5,7 @@
 #include "engine_state.h"
 #include "../platform/platform.h"
 #include "../platform/keyboard.h"
-#include "../input/input.h"
+#include "../game/player_command.h"
 
 //engine state
 static EngineState engine;
@@ -54,6 +54,8 @@ void engine_run(void)
     double accumulator = 0.0;
     const double tick_duration = 1.0 / GAME_TICK_RATE;
 
+    PlayerCommand command;
+
     //game loop
     while (engine.running)
     {
@@ -63,8 +65,8 @@ void engine_run(void)
 
         keyboard_update();
 
-        //check platform event
         PlatformEvent event = platform_process_events();
+
         if (event == PLATFORM_EVENT_QUIT)
         {
             engine_quit();
@@ -72,24 +74,26 @@ void engine_run(void)
 
         process_input();
 
-        if (input_action_down(ACTION_MOVE_FORWARD))
+        player_command_from_input(&command);
+
+        if (command.move_forward)
         {
-            printf("MOVE_FORWARD\n");
+            printf("COMMAND: MOVE_FORWARD\n");
         }
 
-        if (input_action_down(ACTION_MOVE_BACKWARD))
+            if (command.move_backward)
         {
-            printf("MOVE_BACKWARD\n");
+            printf("COMMAND: MOVE_BACKWARD\n");
         }
 
-        if (input_action_down(ACTION_MOVE_LEFT))
+        if (command.move_left)
         {
-            printf("MOVE_LEFT\n");
+            printf("COMMAND: MOVE_LEFT\n");
         }
 
-        if (input_action_down(ACTION_MOVE_RIGHT))
+        if (command.move_right)
         {
-            printf("MOVE_RIGHT\n");
+            printf("COMMAND: MOVE_RIGHT\n");
         }
 
         while (accumulator >= tick_duration)

@@ -35,6 +35,8 @@ add_executable(BahDoom
         src/input/input.h
         resources/bahdoom.rc
         resources/bahdoom-icon.ico
+        src/game/player_command.c
+        src/game/player_command.h
 )
 
 target_link_libraries(BahDoom PRIVATE SDL3::SDL3)

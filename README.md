@@ -1,16 +1,15 @@
-<p align="center">
+<p>
   <img src="resources/bahdoom-banner.png" alt="BahDoom">
 </p>
 
-<h1 align="center">BahDoom Engine</h1>
+<h1>BahDoom Engine</h1>
 
-<p align="center">
+[![Status](https://img.shields.io/badge/status-in%20development-orange)](docs/BAHDOOM_FULL_ROADMAP_CHECKLIST.md) 
+[![Documentation](https://img.shields.io/badge/docs-available-blue)](docs/)
+
+<p>
   An engine inspired by Doom, developed from scratch in C, with a focus on learning, engine architecture, compatibility with the Doom ecosystem, and multiplayer.
 The project was born from the idea of understanding how a game engine works by building each layer gradually, from the game loop and memory management to WAD loading, rendering, and networking.
-</p>
-
-<p align="center">
- «Status: 🚧 Early development».
 </p>
 
 # Central Objective
@@ -123,98 +122,54 @@ docs/
 
 The documentation will also serve as a record of the technical decisions made during development.
 
-# Status
+# Philosophy and Vision
+
+### Development Philosophy
+This project is, above all, a learning project.
+For this reason, some decisions may be less "practical" than simply using an existing engine or ready-made library.
+The goal is to understand:
+
+* how a game loop works;
+* how memory is organized;
+* how binary files are interpreted;
+* how maps are stored;
+* how BSP works;
+* how a renderer transforms data into pixels;
+* how a game simulation works;
+* how multiplayer synchronizes players;
+* how an engine can be organized into modules.
+
+Simple, understandable, and well-documented code will be prioritized whenever possible.
+
+### Vision
+In the long term, the intention is to build an engine capable of providing:
+
+```mermaid
+              flowchart TB
+    ENGINE["DOOM ENGINE"]
+
+    subgraph MODES["GAME MODES"]
+        SINGLE["SINGLEPLAYER"]
+        LOCAL["LOCAL<br/>SPLITSCREEN"]
+        ONLINE["ONLINE"]
+    end
+
+    subgraph COMPAT["WAD COMPATIBILITY"]
+        BOOM["BOOM"]
+        MBF21["MBF21"]
+        ID24["ID24"]
+    end
+
+    ENGINE --> MODES
+    ENGINE --> COMPAT
+```
+
+An engine that prioritizes compatibility, multiplayer, and predictability, without losing the simplicity and philosophy that have kept Doom relevant decades after its release.
+
+# Detailed Status
 
 This project is in early development and is not currently a functional replacement for other Doom source ports.
 APIs, architecture, internal formats, and code organization may change significantly during development.
-
-# Main Development Objectives
-
-Legend:
-* [ ] To do
-* [x] Done
-* 🛠️ Under making
-
-Engine
-
-* [x] Game loop
-* [x] Time system
-* [ ] Memory management
-* [ ] File system
-* [x] Logging system
-* [ ] Engine configuration
-* [ ] Internal console
-
-Platform
-
-* [x] Window creation
-* 🛠️ Keyboard
-* [ ] Mouse
-* [ ] Gamepads
-* [ ] Audio
-* [ ] Support for different operating systems
-
-WAD
-
-* [ ] IWAD loading
-* [ ] PWAD loading
-* [ ] Lump system
-* [ ] Map identification
-* [ ] VERTEXES reading
-* [ ] LINEDEFS reading
-* [ ] SIDEDEFS reading
-* [ ] SECTORS reading
-* [ ] THINGS reading
-* [ ] NODES reading
-* [ ] SSECTORS reading
-* [ ] SEGS reading
-
-Gameplay
-
-* [ ] Player
-* [ ] Movement
-* [ ] Collision
-* [ ] Weapons
-* [ ] Ammunition
-* [ ] Items
-* [ ] Monsters
-* [ ] Projectiles
-* [ ] Damage
-* [ ] Doors
-* [ ] Elevators
-* [ ] Platforms
-* [ ] Teleporters
-* [ ] Switches
-
-Rendering
-
-* [ ] Initial renderer
-* [ ] Map rendering
-* [ ] BSP
-* [ ] Walls
-* [ ] Flats
-* [ ] Textures
-* [ ] Sprites
-* [ ] Visibility
-* [ ] Lighting
-* [ ] HUD
-
-Multiplayer
-
-* [ ] Local multiplayer
-* [ ] 2-player split-screen
-* [ ] 3-player split-screen
-* [ ] 4-player split-screen
-* [ ] Cooperative play
-* [ ] Deathmatch
-* [ ] LAN multiplayer
-* [ ] Online multiplayer
-* [ ] Client/Server
-* [ ] Dedicated server
-* [ ] Interpolation
-* [ ] Prediction
-* [ ] Reconnection
-* [ ] Spectator
 
 Compatibility
 

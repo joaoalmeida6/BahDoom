@@ -16,10 +16,17 @@ void game_init(void)
 }
 
 //update game
-void game_update(double tic_delta)
+void game_update(double tic_delta, const PlayerCommand *command)
 {
     //update player position
-    player_position += player_speed * tic_delta;
+    if (command->move_forward)
+    {
+        player_position += player_speed * tic_delta;
+    }
+    if (command->move_backward)
+    {
+        player_position -= player_speed * tic_delta;
+    }
 }
 
 //shutdown game

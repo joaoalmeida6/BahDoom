@@ -81,7 +81,7 @@ void engine_run(void)
             printf("COMMAND: MOVE_FORWARD\n");
         }
 
-            if (command.move_backward)
+        if (command.move_backward)
         {
             printf("COMMAND: MOVE_BACKWARD\n");
         }
@@ -99,7 +99,7 @@ void engine_run(void)
         while (accumulator >= tick_duration)
         {
             //update game
-            game_update(tick_duration);
+            game_update(tick_duration, &command);
 
             accumulator -= tick_duration;
         }

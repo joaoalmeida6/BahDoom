@@ -4,13 +4,14 @@
 
 #ifndef BAHDOOM_GAME_H
 #define BAHDOOM_GAME_H
+#include "player_command.h"
 
 #define GAME_TICK_RATE 35
 
 //initialize game
 void game_init(void);
 //update game
-void game_update(double tic_delta);
+void game_update(double tic_delta, const PlayerCommand *command);
 //shutdown game
 void game_shutdown(void);
 
